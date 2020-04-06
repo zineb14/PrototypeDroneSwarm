@@ -317,15 +317,19 @@
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="weatherConditionsBtn" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
                                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                                       <Component id="droneCrashBtn" min="-2" pref="401" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Component id="weatherConditionsBtn" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                              <Component id="normalBtn" min="-2" pref="401" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="normalBtn" min="-2" pref="349" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="lowBateryBtn" alignment="1" min="-2" pref="401" max="-2" attributes="0"/>
                                   <Component id="obstacleBtn" alignment="1" min="-2" pref="401" max="-2" attributes="0"/>
@@ -344,14 +348,14 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="droneCrashBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="obstacleBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="55" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
                                       <Component id="lowBateryBtn" min="-2" max="-2" attributes="0"/>
@@ -363,9 +367,10 @@
                                   </Group>
                               </Group>
                           </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="normalBtn" max="32767" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                              <Component id="normalBtn" min="-2" pref="79" max="-2" attributes="0"/>
+                              <EmptySpace pref="49" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
@@ -426,7 +431,7 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="textArea7" min="-2" pref="239" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="1" attributes="0">
+                              <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="textArea5" pref="238" max="32767" attributes="0"/>
@@ -434,8 +439,8 @@
                                   </Group>
                                   <EmptySpace max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="textArea2" min="-2" pref="240" max="-2" attributes="0"/>
-                                      <Component id="textArea4" min="-2" pref="240" max="-2" attributes="0"/>
+                                      <Component id="textArea2" alignment="1" min="-2" pref="240" max="-2" attributes="0"/>
+                                      <Component id="textArea4" alignment="1" min="-2" pref="240" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -500,6 +505,9 @@
                 <Component class="java.awt.TextArea" name="textArea4">
                 </Component>
                 <Component class="java.awt.TextArea" name="textArea5">
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel7">
                   <Properties>
@@ -522,6 +530,10 @@
                   </Properties>
                 </Component>
                 <Component class="java.awt.TextArea" name="textArea7">
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value=""/>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel13">
                   <Properties>
@@ -588,6 +600,9 @@
                   </Properties>
                 </Component>
                 <Component class="java.awt.TextArea" name="textArea1">
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
               </SubComponents>
             </Container>

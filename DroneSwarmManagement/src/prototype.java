@@ -1,17 +1,15 @@
 
 import java.awt.CardLayout;
+import java.awt.Dimension;
 import javax.swing.JOptionPane;
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author Ghitss
- */
+
+
+
 public class prototype extends javax.swing.JFrame {
 
     /**
@@ -213,8 +211,8 @@ public class prototype extends javax.swing.JFrame {
                             .addComponent(textArea3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(textArea2, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(textArea4, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(textArea2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textArea4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -407,13 +405,16 @@ public class prototype extends javax.swing.JFrame {
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(dronesPanelLayout.createSequentialGroup()
                         .addGroup(dronesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(weatherConditionsBtn)
                             .addGroup(dronesPanelLayout.createSequentialGroup()
                                 .addGap(30, 30, 30)
-                                .addComponent(droneCrashBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(21, 21, 21)
-                        .addComponent(normalBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(droneCrashBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dronesPanelLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(weatherConditionsBtn)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(normalBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(91, 91, 91)
                         .addGroup(dronesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lowBateryBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(obstacleBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -426,13 +427,13 @@ public class prototype extends javax.swing.JFrame {
         dronesPanelLayout.setVerticalGroup(
             dronesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dronesPanelLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(dronesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(dronesPanelLayout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(dronesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(droneCrashBtn)
                             .addComponent(obstacleBtn))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(dronesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dronesPanelLayout.createSequentialGroup()
                                 .addComponent(lowBateryBtn)
@@ -440,9 +441,10 @@ public class prototype extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dronesPanelLayout.createSequentialGroup()
                                 .addComponent(weatherConditionsBtn)
                                 .addGap(17, 17, 17))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dronesPanelLayout.createSequentialGroup()
-                        .addComponent(normalBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)))
+                    .addGroup(dronesPanelLayout.createSequentialGroup()
+                        .addGap(43, 43, 43)
+                        .addComponent(normalBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)))
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(dronesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -474,10 +476,145 @@ public class prototype extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void droneCrashBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_droneCrashBtnActionPerformed
-        CardLayout card = (CardLayout)mainPanel.getLayout();
-        card.show(mainPanel, "Controller System");        
+       //Checking Available drones
+       HeartBeat HB = new HeartBeat();
+       DataCollection DC = new DataCollection();
+       Thread threadHB = new Thread(HB);
+       Thread threadDC = new Thread(DC);
+       
+       textArea8.append("TD[1]:Charging...\nTD[2]:Charging...\nTD[3]:Charging...\nTD[4]:Charging...\n");
+       textArea4.append("Charging\n");
+        textArea1.append("Checking Available Drones...\n");
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       textArea3.append("MD[3]: Sending Acknoledgement to Main....\n");
+       try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       textArea3.append("MD[4]: Sending Acknoledgement to Main....\n");
+       try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       textArea3.append("MD[2]: Sending Acknoledgement to Main....\n");
+       try {
+            TimeUnit.MILLISECONDS.sleep(200);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       textArea3.append("MD[1]: Sending Acknoledgement to Main....\n");
+       try {
+            TimeUnit.MILLISECONDS.sleep(2000);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       //Selecting First Drone
+        textArea1.append("MD[3][4][2] were picked.\n");
+        try {
+             TimeUnit.SECONDS.sleep(2);
+         } catch (InterruptedException ex) {
+             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+         }
+        
+        threadHB.start();
+        textArea1.append("Sending Acknoledgemnts...\n");
+        textArea6.append("Assigning SubAreas to Drones...\n");
+        textArea4.setText(""); textArea4.setText("Executing Mission\nCharging");
+        try {
+             TimeUnit.SECONDS.sleep(1);
+         } catch (InterruptedException ex) {
+             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+         }
+         threadDC.start();
+        try {
+             TimeUnit.SECONDS.sleep(2);
+         } catch (InterruptedException ex) {
+             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+         }
+        textArea2.append("MD[2]:Generating Working drone's Tasks\n");
+        textArea2.append("MD[4]:Generating Working drone's Tasks\n");
+        textArea2.append("MD[3]:Generating Working drone's Tasks\n");
+        textArea3.append("Assigning Tasks to working Drones...\n");
+        textArea6.append("Collecting Data...\n");
+        try {
+             TimeUnit.SECONDS.sleep(5);
+         } catch (InterruptedException ex) {
+             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+         } 
+        textArea6.append("WD: Drone #465WD Crashed...\n");
+        try {
+             TimeUnit.SECONDS.sleep(1);
+         } catch (InterruptedException ex) {
+             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+         } 
+        textArea4.setText(""); textArea4.setText("Notify Drone Crash\nExecuting Mission\nCharging\n"); 
+        textArea1.append("Initiating Drone Retrieval Program\n");
+        textArea1.append("Checking Availability of Transporter Drone\n");
+        try {
+             TimeUnit.SECONDS.sleep(2);
+         } catch (InterruptedException ex) {
+             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+         } 
+        textArea8.append("Sending Acknowledgement...\n");
+        try {
+             TimeUnit.SECONDS.sleep(2);
+         } catch (InterruptedException ex) {
+             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+         } 
+        textArea1.append("Deploying Transporter Drones\n");
+        try {
+             TimeUnit.SECONDS.sleep(1);
+         } catch (InterruptedException ex) {
+             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+         } 
+        textArea1.append("Assigning Replacement Drone to Drone[3]\n");
+        try {
+             TimeUnit.SECONDS.sleep(2);
+         } catch (InterruptedException ex) {
+             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+         } 
+        textArea3.append("Deploying new Drone\n");
+        textArea8.append("Crashed Drone Retrieved Ackoledgemen\n");
+        textArea4.setText(""); textArea4.append("Deploy New Drone\nExecuting Mission\nCharging");
+        try {
+             TimeUnit.SECONDS.sleep(2);
+         } catch (InterruptedException ex) {
+             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+         } 
+        textArea1.append("Crashed Drone Retrieved\n");
+        textArea3.append("Assign Task to new WD\n");
+        textArea4.setText(""); textArea4.append("Executing Mission\nCharging\n");
+        try {
+             TimeUnit.SECONDS.sleep(3);
+         } catch (InterruptedException ex) {
+             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+         } 
+        threadDC.stop();
+        threadHB.stop();
+        
+        textArea3.append("Task Completed\n");
+        textArea4.setText(""); textArea4.append("Ordering WD to land in base\nCharging\n");
+        textArea3.append("Sending Result to Main\n");
+        textArea6.append("Landing...\n");
+        
+        try {
+             TimeUnit.SECONDS.sleep(2);
+         } catch (InterruptedException ex) {
+             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+         } 
+        textArea1.append("Assembling Final Result...\n");
+        textArea6.append("Landed...\nCharing...\n");
+        map.setSize(new Dimension(1000, 750));
+        map.setVisible(true);
+        
     }//GEN-LAST:event_droneCrashBtnActionPerformed
-
+     
     private void weatherConditionsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_weatherConditionsBtnActionPerformed
         CardLayout card = (CardLayout)mainPanel.getLayout();
         card.show(mainPanel, "Drone Swarm System");
@@ -577,14 +714,16 @@ public class prototype extends javax.swing.JFrame {
     private javax.swing.JButton normalBtn;
     private javax.swing.JButton obstacleBtn;
     private javax.swing.JOptionPane sending;
-    private java.awt.TextArea textArea1;
+    public java.awt.TextArea textArea1;
     private java.awt.TextArea textArea2;
     private java.awt.TextArea textArea3;
     private java.awt.TextArea textArea4;
-    private java.awt.TextArea textArea5;
+    public static java.awt.TextArea textArea5;
     private java.awt.TextArea textArea6;
-    private java.awt.TextArea textArea7;
+    public static java.awt.TextArea textArea7;
     private java.awt.TextArea textArea8;
     private javax.swing.JButton weatherConditionsBtn;
     // End of variables declaration//GEN-END:variables
 }
+
+
