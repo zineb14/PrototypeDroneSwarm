@@ -1142,86 +1142,102 @@ public class prototype extends javax.swing.JFrame {
 
     private void normalBtnActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
-        textArea1.append("Request to map area X\n");
-           try {
-             TimeUnit.SECONDS.sleep(1);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         }
-        textArea3.append("Map area request received.\n");
+       HeartBeat HB = new HeartBeat();
+       DataCollection DC = new DataCollection();
+       Thread threadHB = new Thread(HB);
+       Thread threadDC = new Thread(DC);
+       
+       textArea1.append("Request Received from Controller Manager System...\n");
+       try {
+            TimeUnit.SECONDS.sleep(2);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       textArea1.append("Checking Available Drones...\n");
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       textArea3.append("MD[3]: Sending Acknoledgement to Main....\n");
+       try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       textArea3.append("MD[4]: Sending Acknoledgement to Main....\n");
+       try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       textArea3.append("MD[2]: Sending Acknoledgement to Main....\n");
+       try {
+            TimeUnit.MILLISECONDS.sleep(200);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       textArea3.append("MD[1]: Sending Acknoledgement to Main....\n");
+       try {
+            TimeUnit.MILLISECONDS.sleep(2000);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       //Selecting First Drone
+        textArea1.append("MD[3][4][2] were picked.\n");
         try {
              TimeUnit.SECONDS.sleep(2);
          } catch (InterruptedException ex) {
              Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
          }
-        textArea2.append("Planning command satisfaction...\n");
+        
+        threadHB.start();
+        textArea1.append("Sending Acknoledgemnts...\n");
+        textArea2.append("Planning task execution...\n");
         try {
-             TimeUnit.SECONDS.sleep(2);
+             TimeUnit.SECONDS.sleep(6);
          } catch (InterruptedException ex) {
              Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
          }
-        textArea2.append("MD2 Sending request task 1 to WD 2...\n");
-        textArea2.append("MD4 Sending request task 2 to WD 3...\n");
-        textArea2.append("MD6 Sending request task 3 to WD 4...\n");
-        textArea2.append("MD8 Sending request task 4 to WD 5...\n");
-           try {
-             TimeUnit.SECONDS.sleep(2);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         }     
-        textArea6.append("WD 2: Task received from MD 2 \n");
-        textArea6.append("WD 3: Task received from MD 4\n");
-        textArea6.append("WD 4: Task received from MD 6\n");
-        textArea6.append("WD 5: Task received from MD 8\n");
-  
-           try {
-             TimeUnit.SECONDS.sleep(1);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         }
-        textArea3.append("MD2 receives acknowledgment from WD 2\n");
-        textArea3.append("MD4 receives acknowledgment from WD 3\n");
-        textArea3.append("MD6 receives acknowledgment from WD 4\n");
-        textArea3.append("MD8 receives acknowledgment from WD 5\n");
-        
-        textArea6.append("WD 2: Executing task...\n");
-        textArea6.append("WD 3: Executing task...\n");
-        textArea6.append("WD 4: Executing task...\n");
-        textArea6.append("WD 5: Executing task...\n");
-        
+        textArea2.append("MD[2]:Generating Working drone's Tasks\n");
+        textArea2.append("MD[4]:Generating Working drone's Tasks\n");
+        textArea2.append("MD[3]:Generating Working drone's Tasks\n");
+        textArea3.append("Assigning Tasks to working Drones...\n");
+    
            try {
              TimeUnit.SECONDS.sleep(2);
          } catch (InterruptedException ex) {
              Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
          }
-        
-        textArea6.append("WD 2: Sending data gathered to MD2...\n");
-        textArea6.append("WD 3: Sending data gathered to MD4...\n");
-        textArea6.append("WD 4: Sending data gathered to MD6...\n");
-        textArea6.append("WD 5: Sending data gathered to MD8...\n");  
-           
-           try {
-             TimeUnit.SECONDS.sleep(2);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         }
-        textArea3.append("MD8 Data received from WD 5\n");
-        textArea3.append("MD4 Data received from WD 3\n");
-        textArea3.append("MD6 Data received from WD 4\n");
-        textArea3.append("MD8 Data received from WD 5\n");
+
+        textArea6.append("Mapping request received from MD\n");
+        textArea6.append("Sending acknowledgement to MD\n");
+        threadDC.start();
+        textArea6.append("Collecting Data...\n");
         try {
-             TimeUnit.SECONDS.sleep(2);
+             TimeUnit.SECONDS.sleep(7);
          } catch (InterruptedException ex) {
              Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         }
-        textArea3.append("Data reception complete\n");
-        
-        textArea5.append("Assembling data...\n");
+         } 
+        textArea6.append("Sending Data to MD...\n");
            try {
-             TimeUnit.SECONDS.sleep(2);
+             TimeUnit.SECONDS.sleep(7);
          } catch (InterruptedException ex) {
              Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         }
+         } 
+        textArea3.append("MD: Data receiving data from WD...\n");
+        try {
+             TimeUnit.SECONDS.sleep(5);
+         } catch (InterruptedException ex) {
+             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+         } 
+        textArea3.append("MD: Data reception complete \n");
+           try {
+             TimeUnit.SECONDS.sleep(3);
+         } catch (InterruptedException ex) {
+             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+         } 
+
         textArea5.append("Assembling complete. Map ready\n");
            try {
              TimeUnit.SECONDS.sleep(1);
@@ -1242,6 +1258,8 @@ public class prototype extends javax.swing.JFrame {
          }
         map.setSize(new Dimension(1000, 750));
         map.setVisible(true);
+        threadDC.stop();
+        threadHB.stop();
     }                                         
 
     private void clearBtnActionPerformed(java.awt.event.ActionEvent evt) {                                         
