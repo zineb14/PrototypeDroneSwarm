@@ -1178,7 +1178,8 @@ public class prototype extends javax.swing.JFrame {
     }                                            
 
     private void normalBtnActionPerformed(java.awt.event.ActionEvent evt) {                                          
-    HeartBeat HB = new HeartBeat();
+          
+       HeartBeat HB = new HeartBeat();
        DataCollection DC = new DataCollection();
        Thread threadHB = new Thread(HB);
        Thread threadDC = new Thread(DC);
@@ -1213,12 +1214,7 @@ public class prototype extends javax.swing.JFrame {
         } catch (InterruptedException ex) {
             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
         }
-       textArea3.append("MD[1]: Sending Acknoledgement to Main....\n");
-       try {
-            TimeUnit.MILLISECONDS.sleep(2000);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
+
        //Selecting First Drone
         textArea1.append("MD[3][4][2] were picked.\n");
         try {
@@ -1229,9 +1225,16 @@ public class prototype extends javax.swing.JFrame {
         
         threadHB.start();
         textArea1.append("Sending Acknoledgemnts...\n");
+        textArea6.append("Assigning SubAreas to Drones...\n");
         textArea2.append("Planning task execution...\n");
+           try {
+             TimeUnit.SECONDS.sleep(1);
+         } catch (InterruptedException ex) {
+             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+         }
+     
         try {
-             TimeUnit.SECONDS.sleep(6);
+             TimeUnit.SECONDS.sleep(2);
          } catch (InterruptedException ex) {
              Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
          }
@@ -1248,41 +1251,44 @@ public class prototype extends javax.swing.JFrame {
 
         textArea6.append("Mapping request received from MD\n");
         textArea6.append("Sending acknowledgement to MD\n");
-        threadDC.start();
+        
         textArea6.append("Collecting Data...\n");
         try {
              TimeUnit.SECONDS.sleep(7);
          } catch (InterruptedException ex) {
              Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
          } 
+        
+      
         textArea6.append("Sending Data to MD...\n");
            try {
              TimeUnit.SECONDS.sleep(7);
          } catch (InterruptedException ex) {
              Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
          } 
-        textArea3.append("MD: Data receiving data from WD...\n");
+        textArea3.append("MD: receiving data from WD...\n");
         try {
              TimeUnit.SECONDS.sleep(5);
          } catch (InterruptedException ex) {
              Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
          } 
-        
+        threadDC.start();
         textArea3.append("MD: Data reception complete \n");
            try {
              TimeUnit.SECONDS.sleep(3);
          } catch (InterruptedException ex) {
              Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
          } 
-        threadDC.stop();
         
-        textArea5.append("Assembling complete.\n");
+        threadDC.stop();
+        threadHB.stop();
+        textArea5.append("Assembling complete. Map ready\n");
            try {
              TimeUnit.SECONDS.sleep(1);
          } catch (InterruptedException ex) {
              Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
          }
-        textArea3.append("Sending results to manager system...\n");
+        textArea5.append("Sending map to manager system...\n");
            try {
              TimeUnit.SECONDS.sleep(2);
          } catch (InterruptedException ex) {
@@ -1293,7 +1299,12 @@ public class prototype extends javax.swing.JFrame {
              TimeUnit.SECONDS.sleep(5);
          } catch (InterruptedException ex) {
              Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         }  
+         }         
+        try {
+             TimeUnit.SECONDS.sleep(2);
+         } catch (InterruptedException ex) {
+             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+         }
         textArea1.append("Map ready\n");
            try {
              TimeUnit.SECONDS.sleep(1);
@@ -1302,8 +1313,7 @@ public class prototype extends javax.swing.JFrame {
          }
         map.setSize(new Dimension(1000, 750));
         map.setVisible(true);
-        
-        threadHB.stop();  
+       
     }                                         
 
     private void clearBtnActionPerformed(java.awt.event.ActionEvent evt) {                                         
