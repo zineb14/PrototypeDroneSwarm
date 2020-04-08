@@ -1224,7 +1224,6 @@ public class prototype extends javax.swing.JFrame {
          }
         
         threadHB.start();
-        textArea1.append("Sending Acknoledgemnts...\n");
         textArea6.append("Assigning SubAreas to Drones...\n");
         textArea2.append("Planning task execution...\n");
            try {
