@@ -862,172 +862,220 @@ public class prototype extends javax.swing.JFrame {
     private void obstacleBtnActionPerformed(java.awt.event.ActionEvent evt) {                                            
         // TODO add your handling code here:
         //Checking Available drones
+        switch(stepN){
+            case 0:
+                textArea1.append("Checking Available Drones...\n");
+                 try {
+                     TimeUnit.SECONDS.sleep(2);
+                 } catch (InterruptedException ex) {
+                     Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+                 }
+                 stepN++;
+                break;
+            case 1:
+             textArea1.append("Sending mapping command to available drones...\n");
+             try {
+                 TimeUnit.SECONDS.sleep(1);
+             } catch (InterruptedException ex) {
+                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+             }
+             stepN++;
+            break;
+            case 2:
+             threadHB.start();
+             textArea3.append("Sending Acknoledgement to Main....\n");
+            try {
+                 TimeUnit.SECONDS.sleep(1);
+             } catch (InterruptedException ex) {
+                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+             }
+                stepN++;
+                break;
+            case 3:
+            textArea3.append("Assigning Tasks to Worker Drones....\n");
+            try {
+                 TimeUnit.SECONDS.sleep(1);
+             } catch (InterruptedException ex) {
+                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+             }
+            stepN++;
+                break;
+            case 4:
+            textArea2.append("Generating Worker drone's Tasks\n");
+            try {
+                 TimeUnit.SECONDS.sleep(1);
+             } catch (InterruptedException ex) {
+                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+             }
+            stepN++;
+                break;
+            case 5:
+            textArea6.append("Receiving SubArea mapping command\n");
+            stepN++;
+                break;
+            case 6:
+            textArea6.append("Executing command\n");
+            try {
+                 TimeUnit.SECONDS.sleep(4);
+             } catch (InterruptedException ex) {
+                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+             }
+            stepN++;
+                break;
+            case 7:
+            textArea6.append("Detecting nearby object\n");
+            try {
+                 TimeUnit.SECONDS.sleep(1);
+             } catch (InterruptedException ex) {
+                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+             }
+            stepN++;
+                break;
+            case 8:
+            textArea6.append("Identifying object as obstacle\n");
+            try {
+                 TimeUnit.SECONDS.sleep(1);
+             } catch (InterruptedException ex) {
+                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+             }
+            stepN++;
+                break;
+            case 9:
+            textArea3.append("Receiving Worker drone alert....\n");
+            try {
+                 TimeUnit.SECONDS.sleep(1);
+             } catch (InterruptedException ex) {
+                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+             }
+            stepN++;
+                break;
+            case 10:
+            textArea4.append("Detecting higher priority task: Obstacle Detected....\n");
+            textArea4.append("Saving current tasks state....\n");
+            textArea4.append("Preemting current tasks....\n");
+            try {
+                 TimeUnit.SECONDS.sleep(1);
+             } catch (InterruptedException ex) {
+                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+             }
+            stepN++;
+                break;
+            case 11:
+            textArea3.append("Sending redirection command....\n");
+            try {
+                 TimeUnit.SECONDS.sleep(1);
+             } catch (InterruptedException ex) {
+                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+             }
+            stepN++;
+                break;
+            case 12:
+            textArea6.append("Receiving redirection command....\n");
+            try {
+                 TimeUnit.SECONDS.sleep(1);
+             } catch (InterruptedException ex) {
+                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+             }
+            stepN++;
+                break;
+            case 13:
+            textArea6.append("Changing direction....\n");
+            try {
+                 TimeUnit.SECONDS.sleep(1);
+             } catch (InterruptedException ex) {
+                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+             }
+            stepN++;
+                break;
+            case 14:
+            textArea6.append("Pursuing task execution....\n");
+            try {
+                 TimeUnit.SECONDS.sleep(4);
+             } catch (InterruptedException ex) {
+                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+             }
+            stepN++;
+                break;
+            case 15:
+            textArea6.append("Mapping complete....\n");
+            textArea3.append("Mapping task finished by the drones....\n");
+            case 16:
+            textArea5.append("Assembling data from Wroker#ID1....\n");
+            try {
+                 TimeUnit.SECONDS.sleep(2);
+             } catch (InterruptedException ex) {
+                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+             }
+            textArea5.append("Assembling data from Wroker#ID2....\n");
+            try {
+                 TimeUnit.SECONDS.sleep(2);
+             } catch (InterruptedException ex) {
+                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+             }
+            textArea5.append("Assembling data from Wroker#ID3....\n");
+            try {
+                 TimeUnit.SECONDS.sleep(2);
+             } catch (InterruptedException ex) {
+                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+             }
+            textArea5.append("Assembling data from Wroker#ID4....\n");
+            try {
+                 TimeUnit.SECONDS.sleep(2);
+             } catch (InterruptedException ex) {
+                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+             }
+            textArea5.append("Assembling data from Wroker#ID5....\n");
+            try {
+                 TimeUnit.SECONDS.sleep(2);
+             } catch (InterruptedException ex) {
+                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+             }
+            textArea5.append("Assembling data from Wroker#ID7....\n");
+            try {
+                 TimeUnit.SECONDS.sleep(2);
+             } catch (InterruptedException ex) {
+                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+             }
+            textArea5.append("Assembling data from Wroker#ID8....\n");
+            try {
+                 TimeUnit.SECONDS.sleep(2);
+             } catch (InterruptedException ex) {
+                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+             }
+            textArea5.append("Assembling data from Wroker#ID9....\n");
+            try {
+                 TimeUnit.SECONDS.sleep(2);
+             } catch (InterruptedException ex) {
+                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+             }
+            textArea5.append("Assembling data from Wroker#ID11....\n");
+            try {
+                 TimeUnit.SECONDS.sleep(2);
+             } catch (InterruptedException ex) {
+                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+             }
+            textArea5.append("Assembling data from Worker#ID14....\n");
 
-       textArea1.append("Checking Available Drones...\n");
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+            try {
+                 TimeUnit.SECONDS.sleep(4);
+             } catch (InterruptedException ex) {
+                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+             }
+            threadDC.stop();
+            threadHB.stop();
+            case 17:
+            textArea1.append("Assembling Final data....\n");
+            try {
+                 TimeUnit.SECONDS.sleep(4);
+             } catch (InterruptedException ex) {
+                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+             }
+            map.setSize(new Dimension(1000, 750));
+             map.setVisible(true);
+             
+            default:
+                stepN=0;
         }
-        
-        textArea1.append("Sending mapping command to available drones...\n");
-        try {
-            TimeUnit.SECONDS.sleep(1);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        threadHB.start();
-        textArea3.append("Sending Acknoledgement to Main....\n");
-       try {
-            TimeUnit.SECONDS.sleep(1);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea3.append("Assigning Tasks to Worker Drones....\n");
-       try {
-            TimeUnit.SECONDS.sleep(1);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea2.append("Generating Worker drone's Tasks\n");
-       try {
-            TimeUnit.SECONDS.sleep(1);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea6.append("Receiving SubArea mapping command\n");
-       textArea6.append("Executing command\n");
-       try {
-            TimeUnit.SECONDS.sleep(4);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea6.append("Detecting nearby object\n");
-       try {
-            TimeUnit.SECONDS.sleep(1);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea6.append("Identifying object as obstacle\n");
-       try {
-            TimeUnit.SECONDS.sleep(1);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea3.append("Receiving Worker drone alert....\n");
-       try {
-            TimeUnit.SECONDS.sleep(1);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea4.append("Detecting higher priority task: Obstacle Detected....\n");
-       textArea4.append("Saving current tasks state....\n");
-       textArea4.append("Preemting current tasks....\n");
-       try {
-            TimeUnit.SECONDS.sleep(1);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       
-       textArea3.append("Sending redirection command....\n");
-       try {
-            TimeUnit.SECONDS.sleep(1);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea6.append("Receiving redirection command....\n");
-       try {
-            TimeUnit.SECONDS.sleep(1);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea6.append("Changing direction....\n");
-       try {
-            TimeUnit.SECONDS.sleep(1);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea6.append("Pursuing task execution....\n");
-       try {
-            TimeUnit.SECONDS.sleep(4);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea6.append("Mapping complete....\n");
-       
-       textArea3.append("Mapping task finished by the drones....\n");
-       textArea5.append("Assembling data from Wroker#ID1....\n");
-       try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea5.append("Assembling data from Wroker#ID2....\n");
-       try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea5.append("Assembling data from Wroker#ID3....\n");
-       try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea5.append("Assembling data from Wroker#ID4....\n");
-       try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea5.append("Assembling data from Wroker#ID5....\n");
-       try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea5.append("Assembling data from Wroker#ID7....\n");
-       try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea5.append("Assembling data from Wroker#ID8....\n");
-       try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea5.append("Assembling data from Wroker#ID9....\n");
-       try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea5.append("Assembling data from Wroker#ID11....\n");
-       try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea5.append("Assembling data from Worker#ID14....\n");
-      
-       try {
-            TimeUnit.SECONDS.sleep(4);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       threadDC.stop();
-       threadHB.stop();
-       textArea1.append("Assembling Final data....\n");
-       try {
-            TimeUnit.SECONDS.sleep(4);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       map.setSize(new Dimension(1000, 750));
-        map.setVisible(true);
-      
     }                                           
 
     private void lowBateryBtnActionPerformed(java.awt.event.ActionEvent evt) {                                             
