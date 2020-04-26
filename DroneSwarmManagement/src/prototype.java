@@ -9,12 +9,10 @@ import java.util.logging.Logger;
 
 public class prototype extends javax.swing.JFrame {
     public static int stepN = 0;
-    
     HeartBeat HB = new HeartBeat();
     DataCollection DC = new DataCollection();
     Thread threadHB = new Thread(HB);
     Thread threadDC = new Thread(DC);
-    
     /**
      * Creates new form prototype
      */
@@ -581,7 +579,7 @@ public class prototype extends javax.swing.JFrame {
                break;
             case 16:
                 textArea1.append("Assembling Final Result...\n");
-                textArea6.append("Landed...\nCharing...\n");
+                textArea6.append("Landed...\nSharing...\n");
                  try {
                      TimeUnit.SECONDS.sleep(3);
                  } catch (InterruptedException ex) {
@@ -599,49 +597,39 @@ public class prototype extends javax.swing.JFrame {
                 stepN=0;
             
        }
-
-        
-        
-    }                                             
-     
-    private void weatherConditionsBtnActionPerformed(java.awt.event.ActionEvent evt) {                                                     
-
+        /*  //Checking Available drones
        HeartBeat HB = new HeartBeat();
        DataCollection DC = new DataCollection();
        Thread threadHB = new Thread(HB);
        Thread threadDC = new Thread(DC);
        
-       textArea1.append("Request Received from Controller Manager System...\n");
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea1.append("Checking Available Drones...\n");
+       textArea8.append("TD[1]:Charging...\nTD[2]:Charging...\nTD[3]:Charging...\nTD[4]:Charging...\n");
+       textArea4.append("Charging\n");
+        textArea1.append("Checking Available Drones...\n");
         try {
             TimeUnit.SECONDS.sleep(3);
         } catch (InterruptedException ex) {
             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
         }
-       textArea3.append("MD[3]: Sending Acknoledgement to Manager System....\n");
+       textArea3.append("MD[3]: Sending Acknoledgement to Main....\n");
        try {
-            TimeUnit.SECONDS.sleep(2);
+            TimeUnit.SECONDS.sleep(1);
         } catch (InterruptedException ex) {
             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
         }
-       textArea3.append("MD[4]: Sending Acknoledgement to Manager System....\n");
+       textArea3.append("MD[4]: Sending Acknoledgement to Main....\n");
        try {
-            TimeUnit.SECONDS.sleep(2);
+            TimeUnit.SECONDS.sleep(3);
         } catch (InterruptedException ex) {
             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
         }
-       textArea3.append("MD[2]: Sending Acknoledgement to Manager System....\n");
+       textArea3.append("MD[2]: Sending Acknoledgement to Main....\n");
        try {
             TimeUnit.MILLISECONDS.sleep(200);
         } catch (InterruptedException ex) {
             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
         }
-       textArea3.append("MD[1]: Sending Acknoledgement to Manager System....\n");
+       textArea3.append("MD[1]: Sending Acknoledgement to Main....\n");
        try {
             TimeUnit.MILLISECONDS.sleep(2000);
         } catch (InterruptedException ex) {
@@ -657,9 +645,16 @@ public class prototype extends javax.swing.JFrame {
         
         threadHB.start();
         textArea1.append("Sending Acknoledgemnts...\n");
-        textArea2.append("Planning mapping task execution...\n");
+        textArea6.append("Assigning SubAreas to Drones...\n");
+        textArea4.setText(""); textArea4.setText("Executing Mission\nCharging");
         try {
-             TimeUnit.SECONDS.sleep(6);
+             TimeUnit.SECONDS.sleep(1);
+         } catch (InterruptedException ex) {
+             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+         }
+         threadDC.start();
+        try {
+             TimeUnit.SECONDS.sleep(2);
          } catch (InterruptedException ex) {
              Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
          }
@@ -667,102 +662,197 @@ public class prototype extends javax.swing.JFrame {
         textArea2.append("MD[4]:Generating Working drone's Tasks\n");
         textArea2.append("MD[3]:Generating Working drone's Tasks\n");
         textArea3.append("Assigning Tasks to working Drones...\n");
-        try {
-             TimeUnit.SECONDS.sleep(2);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         }
-        textArea6.append("Mapping request received from MD\n");
-        textArea6.append("Sending request acknowledgement to MD\n");
-        threadDC.start();
         textArea6.append("Collecting Data...\n");
         try {
-             TimeUnit.SECONDS.sleep(7);
+             TimeUnit.SECONDS.sleep(5);
          } catch (InterruptedException ex) {
              Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
          } 
-        //Weather report 
-        textArea1.append("Weather report received\n");
-        textArea1.append("Bad weather conditions\n");
-        textArea1.append("Request drones to return to the base\n");
-        try {
-             TimeUnit.SECONDS.sleep(2);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         }        
-        textArea3.append("Manager System: Weather conditions not favorable\n");
-        textArea3.append("Request to return to the base\n");
+        textArea6.append("WD: Drone #465WD Crashed...\n");
         try {
              TimeUnit.SECONDS.sleep(1);
          } catch (InterruptedException ex) {
              Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
          } 
-
-       textArea4.append("Detecting higher priority task: Bad weather conditions report....\n");
-       try {
-            TimeUnit.MILLISECONDS.sleep(3000);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea4.append("Saving current tasks state....\n");
-       try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea4.append("Preemting current tasks....\n");
-       try {
-            TimeUnit.SECONDS.sleep(1);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea2.append("Bad weather conditions: Planning return to the base...\n");
-       try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       threadDC.stop();
-       
-       textArea2.append("Enqueuing tasks...\n");
-       try {
-            TimeUnit.SECONDS.sleep(5);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea3.append("Sending requests to ground all drones...\n");
-       textArea3.append("Request to WD1: Ground request\n");
-       textArea3.append("Request to WD2: Ground request\n");
-       textArea3.append("Request to WD3: Ground request\n");
-       textArea3.append("Request to WD4: Ground request\n");
-       textArea3.append("Request to WD5: Ground request\n");
-       textArea3.append("Request to WD6: Ground request\n");
-       textArea3.append("Request to WD7: Ground request\n");
-       textArea3.append("Request to WD8: Ground request\n");
-       
-       textArea3.append("Informing manager system: Drones returning to the base...\n");
+        textArea4.setText(""); textArea4.setText("Notify Drone Crash\nExecuting Mission\nCharging\n"); 
+        textArea1.append("Initiating Drone Retrieval Program\n");
+        textArea1.append("Checking Availability of Transporter Drone\n");
         try {
-            TimeUnit.SECONDS.sleep(1);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea6.append("Preparing return to base...\n");
-       textArea6.append("Landing..\n");
-        try {
-            TimeUnit.SECONDS.sleep(1);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       threadHB.stop();
-       textArea3.append("Landing..\n");
-        try {
-             TimeUnit.SECONDS.sleep(7);
+             TimeUnit.SECONDS.sleep(2);
          } catch (InterruptedException ex) {
              Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
          } 
-       textArea1.append("Drones landed safely \n");
-       textArea1.append("Waiting for favorable weather conditions...\n");                                           
-    
+        textArea8.append("Sending Acknowledgement...\n");
+        try {
+             TimeUnit.SECONDS.sleep(2);
+         } catch (InterruptedException ex) {
+             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+         } 
+        textArea1.append("Deploying Transporter Drones\n");
+        try {
+             TimeUnit.SECONDS.sleep(1);
+         } catch (InterruptedException ex) {
+             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+         } 
+        textArea1.append("Assigning Replacement Drone to Drone[3]\n");
+        try {
+             TimeUnit.SECONDS.sleep(2);
+         } catch (InterruptedException ex) {
+             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+         } 
+        textArea3.append("Deploying new Drone\n");
+        textArea8.append("Crashed Drone Retrieved Ackoledgemen\n");
+        textArea4.setText(""); textArea4.append("Deploy New Drone\nExecuting Mission\nCharging");
+        try {
+             TimeUnit.SECONDS.sleep(2);
+         } catch (InterruptedException ex) {
+             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+         } 
+        textArea1.append("Crashed Drone Retrieved\n");
+        textArea3.append("Assign Task to new WD\n");
+        textArea4.setText(""); textArea4.append("Executing Mission\nCharging\n");
+        try {
+             TimeUnit.SECONDS.sleep(3);
+         } catch (InterruptedException ex) {
+             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+         } 
+        threadDC.stop();
+        threadHB.stop();
+        
+        textArea3.append("Task Completed\n");
+        textArea4.setText(""); textArea4.append("Ordering WD to land in base\nCharging\n");
+        textArea3.append("Sending Result to Main\n");
+        textArea6.append("Landing...\n");
+        
+        try {
+             TimeUnit.SECONDS.sleep(2);
+         } catch (InterruptedException ex) {
+             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+         } 
+        textArea1.append("Assembling Final Result...\n");
+        textArea6.append("Landed...\nCharing...\n");
+        map.setSize(new Dimension(1000, 750));
+        map.setVisible(true);
+        */
+    }                                             
+     
+    private void weatherConditionsBtnActionPerformed(java.awt.event.ActionEvent evt) {                                                     
+
+        switch(stepN){
+            case 0:
+                textArea1.append("Request Received from Controller Manager System...\n");
+                stepN++;
+               break;
+            case 1:
+                textArea1.append("Checking Available Drones...\n");
+                textArea3.append("MD[3]: Sending Acknoledgement to Manager System....\n");
+                textArea3.append("MD[4]: Sending Acknoledgement to Manager System....\n");
+                textArea3.append("MD[2]: Sending Acknoledgement to Manager System....\n");
+                textArea3.append("MD[1]: Sending Acknoledgement to Manager System....\n");
+                stepN++;
+               break;
+            case 2:
+                //Selecting First Drone
+                 textArea1.append("MD[3][4][2] were picked.\n");
+                 stepN++;
+               break;
+            case 3:
+                threadHB.start();
+                textArea1.append("Sending Acknoledgemnts...\n");
+                textArea2.append("Planning mapping task execution...\n");
+                stepN++;
+               break;
+            case 4:
+                textArea2.append("MD[2]:Generating Working drone's Tasks\n");
+                textArea2.append("MD[4]:Generating Working drone's Tasks\n");
+                textArea2.append("MD[3]:Generating Working drone's Tasks\n");
+                stepN++;
+               break;
+            case 5:
+                textArea3.append("Assigning Tasks to working Drones...\n");
+                stepN++;
+               break;
+            case 6:
+                textArea6.append("Mapping request received from MD\n");
+                textArea6.append("Sending request acknowledgement to MD\n");
+                stepN++;
+               break;
+            case 7:
+                threadDC.start();
+                stepN++;
+               break;
+            case 8: 
+                textArea6.append("Collecting Data...\n");
+                stepN++;
+               break;
+            case 9:
+                //Weather report 
+                textArea1.append("Weather report received\n");
+                textArea1.append("Bad weather conditions\n");
+                textArea1.append("Request drones to return to the base\n");
+                stepN++;
+               break;
+            case 10:
+                textArea3.append("Manager System: Weather conditions not favorable\n");
+                textArea3.append("Request to return to the base\n");
+                stepN++;
+               break;
+            case 11:
+                textArea4.append("Detecting higher priority task: Bad weather conditions report....\n");
+                textArea4.append("Saving current tasks state....\n");
+                stepN++;
+               break;
+            case 12:
+                textArea4.append("Preemting current tasks....\n");
+                stepN++;
+               break;
+            case 13:
+                textArea2.append("Bad weather conditions: Planning return to the base...\n");
+                stepN++;
+               break;
+            case 14:
+                threadDC.stop();
+                textArea2.append("Enqueuing tasks...\n");
+                stepN++;
+               break;
+            case 15: 
+                textArea3.append("Sending requests to ground all drones...\n");
+                textArea3.append("Request to WD1: Ground request\n");
+                textArea3.append("Request to WD2: Ground request\n");
+                textArea3.append("Request to WD3: Ground request\n");
+                textArea3.append("Request to WD4: Ground request\n");
+                textArea3.append("Request to WD5: Ground request\n");
+                textArea3.append("Request to WD6: Ground request\n");
+                textArea3.append("Request to WD7: Ground request\n");
+                textArea3.append("Request to WD8: Ground request\n");
+                stepN++;
+               break;
+            case 16: 
+                textArea3.append("Informing manager system: Drones returning to the base...\n");
+                stepN++;
+               break;
+            case 17:
+                textArea6.append("Preparing return to base...\n");
+                textArea6.append("Landing..\n");
+                threadHB.stop();
+                stepN++;
+               break;
+            case 18:
+                textArea3.append("Landing..\n");
+                stepN++;
+               break;
+            case 19:
+                textArea1.append("Drones landed safely \n");
+                textArea1.append("Waiting for favorable weather conditions...\n");                                           
+                stepN++;
+               break;
+            case 20:
+                stepN++;
+               break;
+               
+            default:
+                stepN=0;
+        }
     }                                                    
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {                                         
@@ -772,11 +862,7 @@ public class prototype extends javax.swing.JFrame {
     private void obstacleBtnActionPerformed(java.awt.event.ActionEvent evt) {                                            
         // TODO add your handling code here:
         //Checking Available drones
-       HeartBeat HB = new HeartBeat();
-       DataCollection DC = new DataCollection();
-       Thread threadHB = new Thread(HB);
-       Thread threadDC = new Thread(DC);
-       
+
        textArea1.append("Checking Available Drones...\n");
         try {
             TimeUnit.SECONDS.sleep(2);
@@ -790,6 +876,7 @@ public class prototype extends javax.swing.JFrame {
         } catch (InterruptedException ex) {
             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
         }
+        threadHB.start();
         textArea3.append("Sending Acknoledgement to Main....\n");
        try {
             TimeUnit.SECONDS.sleep(1);
@@ -931,6 +1018,7 @@ public class prototype extends javax.swing.JFrame {
             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
         }
        threadDC.stop();
+       threadHB.stop();
        textArea1.append("Assembling Final data....\n");
        try {
             TimeUnit.SECONDS.sleep(4);
@@ -939,356 +1027,223 @@ public class prototype extends javax.swing.JFrame {
         }
        map.setSize(new Dimension(1000, 750));
         map.setVisible(true);
-       
+      
     }                                           
 
     private void lowBateryBtnActionPerformed(java.awt.event.ActionEvent evt) {                                             
-
-       HeartBeat HB = new HeartBeat();
-       DataCollection DC = new DataCollection();
-       Thread threadHB = new Thread(HB);
-       Thread threadDC = new Thread(DC);
-
-       textArea1.append("Request Received from Controller Manager System...\n");
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea1.append("Checking Available Drones...\n");
-        try {
-            TimeUnit.SECONDS.sleep(3);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea3.append("MD[3]: Sending Acknoledgement to Manager System....\n");
-       try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea3.append("MD[4]: Sending Acknoledgement to Manager System....\n");
-       try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea3.append("MD[2]: Sending Acknoledgement to Manager System....\n");
-       try {
-            TimeUnit.MILLISECONDS.sleep(200);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea3.append("MD[1]: Sending Acknoledgement to Manager System....\n");
-       try {
-            TimeUnit.MILLISECONDS.sleep(2000);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       //Selecting First Drone
-        textArea1.append("MD[3][4][2] were picked.\n");
-        try {
-             TimeUnit.SECONDS.sleep(2);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         }
-        
-        threadHB.start();
-        textArea1.append("Sending Acknoledgemnts...\n");
-        textArea2.append("Planning mapping task execution...\n");
-        try {
-             TimeUnit.SECONDS.sleep(6);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         }
-        textArea2.append("MD[2]:Generating Working drone's Tasks\n");
-        textArea2.append("MD[4]:Generating Working drone's Tasks\n");
-        textArea2.append("MD[3]:Generating Working drone's Tasks\n");
-        textArea3.append("Assigning Tasks to working Drones...\n");
-        try {
-             TimeUnit.SECONDS.sleep(2);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         }
-        textArea6.append("Mapping request received from MD\n");
-        textArea6.append("Sending request acknowledgement to MD\n");
-        threadDC.start();
-        textArea6.append("Collecting Data...\n");
-        try {
-             TimeUnit.SECONDS.sleep(7);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         } 
-        textArea6.append("WD: Low Battery \n");
-        try {
-             TimeUnit.SECONDS.sleep(1);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         }        
-        textArea6.append("WD: Reporting low battery warning to Manager Drone...\n");
-        try {
-             TimeUnit.SECONDS.sleep(1);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         } 
-        textArea3.append("MD:Low Battery Report received from WD#16\n");
-        try {
-            TimeUnit.SECONDS.sleep(1);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea4.append("Detecting higher priority task: Low Battery Warning....\n");
-       try {
-            TimeUnit.MILLISECONDS.sleep(3000);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea4.append("Saving current tasks state....\n");
-       try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea4.append("Preemting current tasks....\n");
-       try {
-            TimeUnit.SECONDS.sleep(1);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea3.append("Sending request to WD#14 to join base...\n");
-       textArea3.append("Informing manager system: Drone returning to the base...\n");
-        try {
-            TimeUnit.SECONDS.sleep(1);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea1.append("WD#14 returning to the base to get charged\n");
-        try {
-            TimeUnit.SECONDS.sleep(1);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea6.append("Preparing return to base...\n");
-       textArea6.append("Landing..\n");
-        try {
-            TimeUnit.SECONDS.sleep(1);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea4.setText("");
-        try {
-             TimeUnit.SECONDS.sleep(10);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         } 
-       textArea2.append("Replanning WD#16 task...\n");
-       textArea2.append("Checking for available drones\n");
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea2.append("Assign task to WD#23\n");
-       textArea3.append("Sending re-assigned task to WD#23\n");
-        try {
-             TimeUnit.SECONDS.sleep(2);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         } 
-        textArea6.setText("");
-        textArea6.append("Mapping request received from MD\n");
-        try {
-             TimeUnit.SECONDS.sleep(1);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         } 
-        textArea6.append("Sending acknowledgement to MD\n");
-        try {
-             TimeUnit.SECONDS.sleep(1);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         } 
-        textArea6.append("Executing task...\n");
-        textArea3.append("WD#23 Acknowledgement received...\n");
-        try {
-             TimeUnit.SECONDS.sleep(2);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         } 
-        
-        threadDC.stop();
-        
-        try {
-             TimeUnit.SECONDS.sleep(2);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         } 
-        textArea3.append("Task Completed\n");
-        try {
-             TimeUnit.SECONDS.sleep(2);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         }
-        textArea3.append("Ordering worker drones to land\n...");
-        textArea3.append("Sending Result to Manager System\n");
-        try {
-             TimeUnit.SECONDS.sleep(5);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         } 
-        textArea6.append("Landing...\n");
-        threadHB.stop();
-        try {
-             TimeUnit.SECONDS.sleep(2);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         } 
-        textArea1.append("Assembling Final Result...\n");
-        try {
-             TimeUnit.SECONDS.sleep(5);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         }         
-        map.setSize(new Dimension(1000, 750));
-        map.setVisible(true);
+      switch(stepN){
+            case 0:
+                textArea1.append("Request Received from Controller Manager System...\n");
+                stepN++;
+               break;
+            case 1:
+                textArea1.append("Checking Available Drones...\n");
+                textArea3.append("MD[3]: Sending Acknoledgement to Manager System....\n");
+                textArea3.append("MD[4]: Sending Acknoledgement to Manager System....\n");
+                textArea3.append("MD[2]: Sending Acknoledgement to Manager System....\n");
+                textArea3.append("MD[1]: Sending Acknoledgement to Manager System....\n");
+                stepN++;
+               break;
+            case 2:
+                //Selecting First Drone
+                 textArea1.append("MD[3][4][2] were picked.\n");
+                 stepN++;
+               break;
+            case 3:
+                threadHB.start();
+                textArea1.append("Sending Acknoledgemnts...\n");
+                textArea2.append("Planning mapping task execution...\n");
+                stepN++;
+               break;
+            case 4:
+                textArea2.append("MD[2]:Generating Working drone's Tasks\n");
+                textArea2.append("MD[4]:Generating Working drone's Tasks\n");
+                textArea2.append("MD[3]:Generating Working drone's Tasks\n");
+                stepN++;
+               break;
+            case 5:
+                textArea3.append("Assigning Tasks to working Drones...\n");
+                stepN++;
+               break;
+            case 6:
+                textArea6.append("Mapping request received from MD\n");
+                textArea6.append("Sending request acknowledgement to MD\n");
+                stepN++;
+               break;
+            case 7:
+                threadDC.start();
+                stepN++;
+               break;
+            case 8: 
+                textArea6.append("Collecting Data...\n");
+                stepN++;
+               break;
+            case 9:                
+                textArea6.append("WD: Low Battery \n");     
+                textArea6.append("WD: Reporting low battery warning to Manager Drone...\n");
+                stepN++;
+               break;
+            case 10:
+                textArea3.append("MD:Low Battery Report received from WD#16\n");
+                stepN++;
+                break;
+            case 11:
+                textArea4.append("Detecting higher priority task: Low Battery Warning....\n");
+                textArea4.append("Saving current tasks state....\n");
+                stepN++;
+               break;
+            case 12:
+               textArea4.append("Preemting current tasks....\n");
+               stepN++;
+               break;
+            case 13:
+                textArea3.append("Sending request to WD#14 to join base...\n");
+                textArea3.append("Informing manager system: Drone returning to the base...\n");
+                stepN++;
+               break;
+            case 14:                  
+                textArea1.append("WD#14 returning to the base to get charged\n");
+                stepN++;
+               break;
+            case 15:
+                textArea6.append("Preparing return to base...\n");
+                stepN++;
+                break;
+            case 16:
+                textArea6.append("Landing..\n");
+                stepN++;
+                break;
+            case 17: 
+                textArea6.setText("");
+                textArea2.append("Replanning WD#16 task...\n");
+                textArea2.append("Checking for available drones\n");
+                stepN++;
+                break;
+            case 18:
+                textArea2.append("Assign task to WD#23\n");
+                textArea3.append("Sending re-assigned task to WD#23\n");
+                stepN++;
+                break;
+            case 19:
+                textArea6.append("Mapping request received from MD\n");
+                textArea6.append("Sending acknowledgement to MD\n");
+                textArea6.append("Executing task...\n");
+                stepN++;
+                break;
+            case 20:
+                textArea3.append("WD#23 Acknowledgement received...\n");
+                stepN++;
+               break;
+            case 21:  
+                threadDC.stop();
+                    textArea3.append("Task Completed\n");
+                    textArea3.append("Ordering worker drones to land\n...");
+                    textArea3.append("Sending Result to Manager System\n");
+                    stepN++;
+                    break;
+            case 22:
+                 textArea6.append("Landing...\n");
+                 threadHB.stop();
+                 stepN++;
+               
+               break;
+            case 23:
+                textArea1.append("Assembling Final Result...\n");
+                stepN++;
+                break;
+            case 24:
+                textArea1.append("Map Ready...\n");
+                map.setSize(new Dimension(1000, 750));
+                map.setVisible(true);
+                stepN++;
+               break;
+            case 25:
+                stepN++;
+               break;
+             
+            default:
+                stepN=0;
+      }
     }                                            
 
     private void normalBtnActionPerformed(java.awt.event.ActionEvent evt) {                                          
-          
-       HeartBeat HB = new HeartBeat();
-       DataCollection DC = new DataCollection();
-       Thread threadHB = new Thread(HB);
-       Thread threadDC = new Thread(DC);
-       
-       textArea1.append("Request Received from Controller Manager System...\n");
-       try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea1.append("Checking Available Drones...\n");
-        try {
-            TimeUnit.SECONDS.sleep(3);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea3.append("MD[3]: Sending Acknoledgement to Main....\n");
-       try {
-            TimeUnit.SECONDS.sleep(1);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea3.append("MD[4]: Sending Acknoledgement to Main....\n");
-       try {
-            TimeUnit.SECONDS.sleep(3);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       textArea3.append("MD[2]: Sending Acknoledgement to Main....\n");
-       try {
-            TimeUnit.MILLISECONDS.sleep(200);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-       //Selecting First Drone
-        textArea1.append("MD[3][4][2] were picked.\n");
-        try {
-             TimeUnit.SECONDS.sleep(2);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         }
-        
-        threadHB.start();
-        textArea6.append("Assigning SubAreas to Drones...\n");
-        textArea2.append("Planning task execution...\n");
-           try {
-             TimeUnit.SECONDS.sleep(1);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         }
-     
-        try {
-             TimeUnit.SECONDS.sleep(2);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         }
-        textArea2.append("MD[2]:Generating Working drone's Tasks\n");
-        textArea2.append("MD[4]:Generating Working drone's Tasks\n");
-        textArea2.append("MD[3]:Generating Working drone's Tasks\n");
-        textArea3.append("Assigning Tasks to working Drones...\n");
-    
-           try {
-             TimeUnit.SECONDS.sleep(2);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         }
-
-        textArea6.append("Mapping request received from MD\n");
-        textArea6.append("Sending acknowledgement to MD\n");
-        
-        textArea6.append("Collecting Data...\n");
-        try {
-             TimeUnit.SECONDS.sleep(7);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         } 
-        
-      
-        textArea6.append("Sending Data to MD...\n");
-           try {
-             TimeUnit.SECONDS.sleep(7);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         } 
-        textArea3.append("MD: receiving data from WD...\n");
-        try {
-             TimeUnit.SECONDS.sleep(5);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         } 
-        threadDC.start();
-        textArea3.append("MD: Data reception complete \n");
-           try {
-             TimeUnit.SECONDS.sleep(3);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         } 
-        
-        threadDC.stop();
-        threadHB.stop();
-        textArea5.append("Assembling complete. Map ready\n");
-           try {
-             TimeUnit.SECONDS.sleep(1);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         }
-        textArea5.append("Sending map to manager system...\n");
-           try {
-             TimeUnit.SECONDS.sleep(2);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         }
-        textArea1.append("Assembling Final Result...\n");
-        try {
-             TimeUnit.SECONDS.sleep(5);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         }         
-        try {
-             TimeUnit.SECONDS.sleep(2);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         }
-        textArea1.append("Map ready\n");
-           try {
-             TimeUnit.SECONDS.sleep(1);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
-         }
-        map.setSize(new Dimension(1000, 750));
-        map.setVisible(true);
-       
+    switch(stepN){
+            case 0:
+                textArea1.append("Request Received from Controller Manager System...\n");
+                stepN++;
+               break;
+            case 1:
+                textArea1.append("Checking Available Drones...\n");
+                textArea3.append("MD[3]: Sending Acknoledgement to Manager System....\n");
+                textArea3.append("MD[4]: Sending Acknoledgement to Manager System....\n");
+                textArea3.append("MD[2]: Sending Acknoledgement to Manager System....\n");
+                textArea3.append("MD[1]: Sending Acknoledgement to Manager System....\n");
+                stepN++;
+               break;
+            case 2:
+                //Selecting First Drone
+                 textArea1.append("MD[3][4][2] were picked.\n");
+                 stepN++;
+               break;
+            case 3:
+                threadHB.start();
+                textArea1.append("Sending Acknoledgemnts...\n");
+                textArea2.append("Planning mapping task execution...\n");
+                stepN++;
+               break;
+            case 4:
+                textArea2.append("MD[2]:Generating Working drone's Tasks\n");
+                textArea2.append("MD[4]:Generating Working drone's Tasks\n");
+                textArea2.append("MD[3]:Generating Working drone's Tasks\n");
+                stepN++;
+               break;
+            case 5:
+                textArea3.append("Assigning Tasks to working Drones...\n");
+                stepN++;
+               break;
+            case 6:
+                textArea6.append("Mapping request received from MD\n");
+                textArea6.append("Sending request acknowledgement to MD\n");
+                stepN++;
+               break;
+            case 7:
+                threadDC.start();
+                stepN++;
+               break;
+            case 8: 
+                textArea6.append("Collecting Data...\n");
+                stepN++;
+               break;
+            case 9:
+                textArea6.append("Sending Data to MD...\n");
+                stepN++;
+               break;
+            case 10:
+                textArea3.append("MD: Receiving data from WD...\n");
+                textArea3.append("MD: Data reception complete \n");
+                threadDC.stop();
+                stepN++;
+                break;
+            case 11:
+                textArea5.append("Assembling complete.\n");
+                textArea3.append("Sending results to manager system...\n");
+                stepN++;
+            case 12:
+                textArea1.append("Assembling Final Result...\n");
+                stepN++;
+                break;
+            case 13:
+                textArea1.append("Map Ready...\n");
+                map.setSize(new Dimension(1000, 750));
+                map.setVisible(true);
+                stepN++;
+               break;
+            case 14:
+                stepN++;
+               break;
+            default:
+                stepN=0;
+      } 
     }                                         
 
     private void clearBtnActionPerformed(java.awt.event.ActionEvent evt) {                                         
@@ -1300,6 +1255,7 @@ public class prototype extends javax.swing.JFrame {
        textArea6.setText("");
        textArea7.setText("");
        textArea8.setText("");
+       stepN=0;
     }                                        
 
     /**
