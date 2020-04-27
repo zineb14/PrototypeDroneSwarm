@@ -18,9 +18,6 @@ public class HeartBeatReceiving implements Runnable {
             } catch (InterruptedException ex) {
                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
             }
-            Scanner sc= new Scanner(System.in); //System.in is a standard input stream.
-            System.out.print("Enter first number- ");
-            int a= sc.nextInt();
             prototype.textArea7.append("Done[2]: Ack from #632WD\n");
             try {
                 TimeUnit.SECONDS.sleep(1);

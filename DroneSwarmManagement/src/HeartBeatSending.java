@@ -18,9 +18,6 @@ public class HeartBeatSending implements Runnable {
             } catch (InterruptedException ex) {
                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
             }
-            Scanner sc= new Scanner(System.in); //System.in is a standard input stream.
-            System.out.print("Enter first number- ");
-            int a= sc.nextInt();
             prototype.textArea9.append("Done[632WD]: Send heartbeat to MD[2]\n");
             try {
                 TimeUnit.SECONDS.sleep(1);
@@ -39,7 +36,7 @@ public class HeartBeatSending implements Runnable {
             } catch (InterruptedException ex) {
                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
             }
-            prototype.textArea9.append("Done[7234WD]: Send heartbeat to MD[2]\n");
+            prototype.textArea9.append("Done[746WD]: Send heartbeat to MD[2]\n");
             try {
                 TimeUnit.SECONDS.sleep(1);
             } catch (InterruptedException ex) {
