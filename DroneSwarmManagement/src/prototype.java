@@ -699,7 +699,7 @@ public class prototype extends javax.swing.JFrame {
 
     private void normalBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_normalBtnActionPerformed
         // TODO add your handling code here:
-                    numberOfSteps = 12;
+            numberOfSteps = 12;
             startingStep = 9;
             switch(stepN){
             case 0:
