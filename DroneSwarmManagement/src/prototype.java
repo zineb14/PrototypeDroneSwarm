@@ -683,6 +683,100 @@ public class prototype extends javax.swing.JFrame {
     private void weatherConditionsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_weatherConditionsBtnActionPerformed
         CardLayout card = (CardLayout)mainPanel.getLayout();
         card.show(mainPanel, "Drone Swarm System");
+          numberOfSteps = 15;
+       startingStep = 9;
+       switch(stepN){
+           case 0:
+                textArea8.append("TD[1]:Charging... (23 minutes to full charge)\nTD[2]:Charging... (24 minutes to full charge)\nTD[3]:Charging... (5 minutes to full charge)\nTD[4]:Charging... (5 minutes to full charge)\n");
+                textArea4.append("Charging\n");
+                textArea1.append("Receives weather report about temperature,\n");
+                textArea1.append("humidity,wind speed/direction, and precipitation’s probability...\n");
+                textArea1.append("Checking Available Drones...\n");
+                stepN++;
+            break;
+            case 1:textArea3.append("MD[3]: Sending Acknoledgement to Manager Main....\n");
+                stepN++;
+            break;
+            case 2: textArea3.append("MD[4]: Sending Acknoledgement to Manager Main....\n");
+                stepN++;
+            break;
+            case 3: 
+                textArea3.append("MD[2]: Sending Acknoledgement to Manager Main....\n");
+                textArea3.append("MD[1]: Sending Acknoledgement to Manager Main....\n");
+                stepN++;
+            break;
+            case 4:
+                textArea1.append("MD[3] Ack received  (5 seconds)\nMD[4] Ack received  (4 seconds)\nMD[2] Ack received  (6 seconds)\nMD[1] Ack received  (4 seconds)\n");
+                stepN++;
+            break;
+            case 5:textArea1.append("MD[3][4][2] were picked. (5 second average to respond)\n");
+                textArea1.append("Notifying selected Manager Drones...\n");
+                stepN++;
+            break;
+            case 6:
+                textArea3.append("MD[3]: Initializing worker drones (average of 8 seconds needed)\nMD[4]: Initializing worker drones (average of 8 seconds needed)\nMD[2]: Initializing worker drones (average of 7 seconds needed)\n");
+                threadHB.start();
+                threadHBS.start();
+                stepN++;
+            break;
+            case 7:
+                textArea2.append("MD[3]: Generating 15 subtasks (30 minutes needed)\nMD[4]: Generating 15 subtasks (30 minutes needed)\nMD[2]: Generating 15 subtasks (30 minutes needed)\n");
+                textArea4.setText(""); textArea4.setText("Executing Mission\nCharging");
+                stepN++;
+            break;
+            case 8:
+                textArea2.append("MD[3]:Assigning subAreas 1-10 to #323WD/#334WD/#354WD/#322WD/#364WD/#374WD/#347WD/#375WD/#354WD/#312WD\n");
+                textArea2.append("MD[4]:Assigning subAreas 1-10 to #423WD/#434WD/#454WD/#422WD/#464WD/#474WD/#447WD/#475WD/#454WD/#412WD\n");
+                textArea2.append("MD[2]:Assigning SubeAreas 1-10 to #223WD/#234WD/#254WD/#222WD/#264WD/#274WD/#247WD/#275WD/#254WD/#212WD\n");
+                textArea3.append("Assigning Tasks to working Drones...\n");
+                
+                stepN++;
+            break;
+            case 9: 
+                textArea6.append("WD[312->322]:Collecting Data... (4.80GB / 23 minutes needed)\n");
+                textArea6.append("WD[412->422]:Collecting Data... (4.23GB / 22 minutes needed)\n");
+                textArea6.append("WD[212->222]:Collecting Data... (4.63GB / 23 minutes needed)\n");
+                threadDC.start();
+                viewPartialBtn.setVisible(true);
+                stepN++;
+            break;
+         
+            case 10: 
+                textArea6.append("WD[312->322]:Completed \n");
+                textArea6.append("WD[412->422]:Completed \n");
+                textArea6.append("WD[212->222]:Completed \n");
+                threadDC.stop();
+                stepN++;
+            break;
+            case 11:  
+                    threadHB.stop();
+                    threadHBS.stop();
+
+                    textArea3.append("Task Completed\n");
+                    textArea4.setText(""); textArea4.append("Ordering WD to land in base\nCharging\n");
+                    textArea3.append("Sending Result to Main\n");
+                    textArea6.append("Landing...\n");
+                 stepN++;
+               break;
+            case 12:
+                textArea1.append("Assembling Final Result...\n");
+                textArea6.append("Landed...\nCharing...\n");
+                 try {
+                     TimeUnit.SECONDS.sleep(3);
+                 } catch (InterruptedException ex) {
+                     Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
+                 }  
+                 jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maps/4.jpg"))); 
+                map.setSize(new Dimension(686, 600));
+                map.setVisible(true);
+                stepN++;
+                viewPartialBtn.setVisible(false);
+                
+               break;
+             
+            default:
+                stepN=0;
+       }
     }//GEN-LAST:event_weatherConditionsBtnActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
