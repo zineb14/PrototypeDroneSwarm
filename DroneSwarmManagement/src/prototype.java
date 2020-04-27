@@ -699,7 +699,7 @@ public class prototype extends javax.swing.JFrame {
 
     private void normalBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_normalBtnActionPerformed
         // TODO add your handling code here:
-            numberOfSteps = 12;
+            numberOfSteps = 14;
             startingStep = 9;
             switch(stepN){
             case 0:
@@ -724,7 +724,7 @@ public class prototype extends javax.swing.JFrame {
                 //Selecting First Drone
                 textArea1.append("MD[3] Ack received  (5 seconds)\nMD[4] Ack received "
                         + " (4 seconds)\nMD[2] Ack received  (6 seconds)\nMD[1] Ack received  (4 seconds)\n");
-                 stepN++;
+                stepN++;
                break;
             case 5: 
                 textArea1.append("MD[3][4][2] were picked. (5 second average to respond)\n");
@@ -738,7 +738,7 @@ public class prototype extends javax.swing.JFrame {
                 stepN++;
               break;
             case 7:
-                textArea2.append("MD[3]: Generating 10 subtasks (20 minutes needed)\nMD[4]: Generating 10 subtasks (20 minutes needed)\nMD[2]: Generating 10 subtasks (20 minutes needed)\n");
+                textArea2.append("MD[3]: Generating 20 subtasks (88 seconds)\nMD[4]: Generating 18 subtasks (62 seconds)\nMD[2]: Generating 20 subtasks (92 seconds)\n");
                 textArea4.setText(""); textArea4.setText("Executing Mission\nCharging");
                 stepN++;
               break;
@@ -747,25 +747,46 @@ public class prototype extends javax.swing.JFrame {
                 textArea2.append("MD[4]:Assigning subtask 1-10 to #423WD/#434WD/#454WD/#422WD/#464WD/#474WD/#447WD/#475WD/#454WD/#412WD\n");
                 textArea2.append("MD[2]:Assigning subtask 1-10 to #223WD/#234WD/#254WD/#222WD/#264WD/#274WD/#247WD/#275WD/#254WD/#212WD\n");
                 textArea3.append("Assigning Tasks to working Drones...\n");
+                
                 stepN++;
             break;
             case 9: 
-                textArea6.append("WD[312->322]:Collecting Data... (4.80GB / 23 minutes needed)\n");
-                textArea6.append("WD[412->422]:Collecting Data... (4.23GB / 22 minutes needed)\n");
-                textArea6.append("WD[212->222]:Collecting Data... (4.63GB / 23 minutes needed)\n");
+                textArea6.append("WD[312->322]:Collecting Data... (4.80GB / 7 minutes needed)\n");
+                textArea6.append("WD[412->422]:Collecting Data... (4.23GB / 6 minutes needed)\n");
+                textArea6.append("WD[212->222]:Collecting Data... (4.63GB / 6 minutes needed)\n");
                 threadDC.start();
                 viewPartialBtn.setVisible(true);
                 stepN++;
               break;    
             case 10: 
-                textArea6.append("WD[312->322]:Completed \n");
-                textArea6.append("WD[412->422]:Completed \n");
-                textArea6.append("WD[212->222]:Completed \n");
+                textArea6.append("WD[312->322]:Completed (6 minutes)\n");
+                textArea6.append("WD[412->422]:Completed (5 minutes)\n");
+                textArea6.append("WD[212->222]:Completed (6 minutes)\n");
                 threadDC.stop();
                 stepN++;
               break;
-           
-            case 11:  
+            case 20:
+                textArea2.append("MD[3]:Assigning subtask 11-20 to #323WD/#334WD/#354WD/#322WD/#364WD/#374WD/#347WD/#375WD/#354WD/#312WD\n");
+                textArea2.append("MD[4]:Assigning subtask 11-18 to #423WD/#434WD/#454WD/#422WD/#464WD/#474WD/#447WD/#475WD/#454WD/#412WD\n");
+                textArea2.append("MD[2]:Assigning subtask 11-20 to #223WD/#234WD/#254WD/#222WD/#264WD/#274WD/#247WD/#275WD/#254WD/#212WD\n");
+                
+                stepN++;
+            break;    
+            case 11: 
+                textArea6.append("WD[312->322]:Collecting Data... (4.80GB / 7 minutes needed)\n");
+                textArea6.append("WD[412->422]:Collecting Data... (4.23GB / 6 minutes needed)\n");
+                textArea6.append("WD[212->222]:Collecting Data... (4.63GB / 6 minutes needed)\n");
+                threadDC.resume();
+                stepN++;
+            break;
+            case 12: 
+                textArea6.append("WD[312->322]:Completed (5 minutes)\n");
+                textArea6.append("WD[412->422]:Completed (4 minutes)\n");
+                textArea6.append("WD[212->222]:Completed (6 minutes)\n");
+                threadDC.stop();
+                stepN++;
+            break;    
+            case 13:  
                 threadHB.stop();
                 threadHBS.stop();
                 textArea3.append("Task Completed\n");
@@ -774,7 +795,7 @@ public class prototype extends javax.swing.JFrame {
                 textArea6.append("Landing...\n");
                 stepN++;
                break;
-            case 12:
+            case 14:
                 textArea1.append("Assembling Final Result...\n");
                 textArea6.append("Landed...\nCharing...\n");
                 try {
