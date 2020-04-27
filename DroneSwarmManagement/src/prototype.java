@@ -554,7 +554,7 @@ public class prototype extends javax.swing.JFrame {
                 stepN++;
             break;
             case 7:
-                textArea2.append("MD[3]: Generating 20 subtasks (47 minutes needed)\nMD[4]: Generating 18 subtasks (47 minutes needed)\nMD[2]: Generating 20 subtasks (39 minutes needed)\n");
+                textArea2.append("MD[3]: Generating 20 subtasks (88 seconds)\nMD[4]: Generating 18 subtasks (62 seconds)\nMD[2]: Generating 20 subtasks (92 seconds)\n");
                 textArea4.setText(""); textArea4.setText("Executing Mission\nCharging");
                 stepN++;
             break;
@@ -567,9 +567,9 @@ public class prototype extends javax.swing.JFrame {
                 stepN++;
             break;
             case 9: 
-                textArea6.append("WD[312->322]:Collecting Data... (4.80GB / 23 minutes needed)\n");
-                textArea6.append("WD[412->422]:Collecting Data... (4.23GB / 22 minutes needed)\n");
-                textArea6.append("WD[212->222]:Collecting Data... (4.63GB / 23 minutes needed)\n");
+                textArea6.append("WD[312->322]:Collecting Data... (4.80GB / 7 minutes needed)\n");
+                textArea6.append("WD[412->422]:Collecting Data... (4.23GB / 6 minutes needed)\n");
+                textArea6.append("WD[212->222]:Collecting Data... (4.63GB / 6 minutes needed)\n");
                 threadDC.start();
                 viewPartialBtn.setVisible(true);
                 stepN++;
@@ -618,9 +618,9 @@ public class prototype extends javax.swing.JFrame {
                 stepN++;
                break;
             case 19: 
-                textArea6.append("WD[312->322]:Completed \n");
-                textArea6.append("WD[412->422]:Completed \n");
-                textArea6.append("WD[212->222]:Completed \n");
+                textArea6.append("WD[312->322]:Completed (6 minutes)\n");
+                textArea6.append("WD[412->422]:Completed (5 minutes)\n");
+                textArea6.append("WD[212->222]:Completed {6 minutes)\n");
                 threadDC.stop();
                 stepN++;
             break;
@@ -639,9 +639,9 @@ public class prototype extends javax.swing.JFrame {
                 stepN++;
             break;
             case 22: 
-                textArea6.append("WD[312->322]:Completed \n");
-                textArea6.append("WD[412->422]:Completed \n");
-                textArea6.append("WD[212->222]:Completed \n");
+                textArea6.append("WD[312->322]:Completed (5 minutes)\n");
+                textArea6.append("WD[412->422]:Completed (4 minutes)\n");
+                textArea6.append("WD[212->222]:Completed (6 minutes)\n");
                 threadDC.stop();
                 stepN++;
             break;
