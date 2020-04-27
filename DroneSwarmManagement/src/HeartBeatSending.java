@@ -1,71 +1,72 @@
 
+import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
 
-public class DataCollection implements Runnable {
-    public DataCollection() {
+public class HeartBeatSending implements Runnable {
+    public HeartBeatSending() {
     }
-
+    
     public void run() {
         while(true){
-            prototype.textArea5.append("Done[3]: Assemble Data From #346WD (84MB)\n");
+            prototype.textArea9.append("Done[346WD]: Send heartbeat to MD[3]\n");
             try {
                 TimeUnit.SECONDS.sleep(1);
             } catch (InterruptedException ex) {
                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
             }
-            prototype.textArea5.append("Done[2]: Assemble Data From #232WD (23MB)\n");
+            prototype.textArea9.append("Done[232WD]: Send heartbeat to MD[2]\n");
             try {
                 TimeUnit.SECONDS.sleep(1);
             } catch (InterruptedException ex) {
                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
             }
-            prototype.textArea5.append("Done[4]: Assemble Data From #423WD (42MB)\n");
+            prototype.textArea9.append("Done[123WD]: Send heartbeat to MD[1]\n");
             try {
                 TimeUnit.SECONDS.sleep(1);
             } catch (InterruptedException ex) {
                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
             }
-            prototype.textArea5.append("Done[3]: Assemble Data From #323WD (85MB)\n");
+            prototype.textArea9.append("Done[112WD]: Send heartbeat to MD[1]\n");
             try {
                 TimeUnit.SECONDS.sleep(1);
             } catch (InterruptedException ex) {
                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
             }
-            prototype.textArea5.append("Done[2]: Assemble Data From #246WD (126MB)\n");
+            prototype.textArea9.append("Done[246WD]: Send heartbeat to MD[2]\n");
             try {
                 TimeUnit.SECONDS.sleep(1);
             } catch (InterruptedException ex) {
                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
             }
-            prototype.textArea5.append("Done[4]: Assemble Data From #467WD (198MB)\n");
+            prototype.textArea9.append("Done[467WD]: Send heartbeat to MD[4]\n");
             try {
                 TimeUnit.SECONDS.sleep(1);
             } catch (InterruptedException ex) {
                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
             }
-            prototype.textArea5.append("Done[3]: Assemble Data From #343WD (14MB)\n");
+            prototype.textArea9.append("Done[343WD]: Send heartbeat to MD[3]\n");
             try {
                 TimeUnit.SECONDS.sleep(1);
             } catch (InterruptedException ex) {
                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
             }
-            prototype.textArea5.append("Done[2]: Assemble Data From #232WD (201MB)\n");
+            prototype.textArea9.append("Done[232WD]: Send heartbeat to MD[2]\n");
             try {
                 TimeUnit.SECONDS.sleep(1);
             } catch (InterruptedException ex) {
                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
             }
-            prototype.textArea5.append("Done[3]: Assemble Data From #364WD (112MB)\n");
+            prototype.textArea9.append("Done[164WD]: Send heartbeat to MD[1]\n");
             try {
                 TimeUnit.SECONDS.sleep(1);
             } catch (InterruptedException ex) {
                 Logger.getLogger(prototype.class.getName()).log(Level.SEVERE, null, ex);
             }
-            prototype.textArea5.append("Done[4]: Assemble Data From #432WD (74MB)\n");
+            prototype.textArea9.append("Done[432WD]: Send heartbeat to MD[4]\n");
             try {
                 TimeUnit.SECONDS.sleep(1);
             } catch (InterruptedException ex) {
