@@ -201,7 +201,7 @@ public class prototype extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addGap(65, 65, 65)
                 .addComponent(jLabel10)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 218, Short.MAX_VALUE)
                 .addComponent(jLabel7)
                 .addGap(65, 65, 65))
             .addGroup(jPanel3Layout.createSequentialGroup()
@@ -211,25 +211,25 @@ public class prototype extends javax.swing.JFrame {
                 .addComponent(jLabel11)
                 .addGap(49, 49, 49))
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(161, 161, 161)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(243, Short.MAX_VALUE))
+                .addGap(31, 31, 31)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(textArea5, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)
+                    .addComponent(textArea3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(textArea2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textArea4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(textArea7, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(textArea5, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)
-                            .addComponent(textArea3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(161, 161, 161)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(textArea2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(textArea4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(49, 49, 49)
+                        .addComponent(textArea7, javax.swing.GroupLayout.PREFERRED_SIZE, 493, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -253,11 +253,11 @@ public class prototype extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(textArea4, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textArea5, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(41, 41, 41)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(textArea7, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(textArea7, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         jPanel4.setBackground(new java.awt.Color(182, 215, 215));
@@ -332,7 +332,7 @@ public class prototype extends javax.swing.JFrame {
                 .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(textArea6, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -489,7 +489,7 @@ public class prototype extends javax.swing.JFrame {
                         .addComponent(viewPartialBtn)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(dronesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(dronesPanelLayout.createSequentialGroup()
                         .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -520,11 +520,11 @@ public class prototype extends javax.swing.JFrame {
 
     private void droneCrashBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_droneCrashBtnActionPerformed
        //Checking Available drones
-       numberOfSteps = 16;
-       startingStep = 8;
+       numberOfSteps = 24;
+       startingStep = 9;
        switch(stepN){
            case 0:
-                textArea8.append("TD[1]:Charging...\nTD[2]:Charging...\nTD[3]:Charging...\nTD[4]:Charging...\n");
+                textArea8.append("TD[1]:Charging... (23 minutes to full charge)\nTD[2]:Charging... (24 minutes to full charge)\nTD[3]:Charging... (5 minutes to full charge)\nTD[4]:Charging... (5 minutes to full charge)\n");
                 textArea4.append("Charging\n");
                 textArea1.append("Checking Available Drones...\n");
                 stepN++;
@@ -540,65 +540,112 @@ public class prototype extends javax.swing.JFrame {
                 textArea3.append("MD[1]: Sending Acknoledgement to Main....\n");
                 stepN++;
             break;
-            case 4:textArea1.append("MD[3][4][2] were picked.\n");
+            case 4:textArea1.append("MD[3] Ack received  (5 seconds)\nMD[4] Ack received  (4 seconds)\nMD[2] Ack received  (6 seconds)\nMD[1] Ack received  (4 seconds)\n");
                 stepN++;
             break;
-            case 5:threadHB.start();
-                threadHBS.start();
-                textArea1.append("Sending Acknoledgemnts...\n");
-                textArea6.append("Assigning SubAreas to Drones...\n");
-                textArea4.setText(""); textArea4.setText("Executing Mission\nCharging");
+            case 5:textArea1.append("MD[3][4][2] were picked. (5 second average to respond)\n");
+                textArea1.append("Notifying selected Manager Drones...\n");
                 stepN++;
             break;
             case 6:
-                threadDC.start();
+                textArea3.append("MD[3]: Initializing worker drones (average of 8 seconds needed)\nMD[4]: Initializing worker drones (average of 8 seconds needed)\nMD[2]: Initializing worker drones (average of 7 seconds needed)\n");
+                threadHB.start();
+                threadHBS.start();
                 stepN++;
             break;
             case 7:
-                textArea2.append("MD[2]:Generating Working drone's Tasks\n");
-                textArea2.append("MD[4]:Generating Working drone's Tasks\n");
-                textArea2.append("MD[3]:Generating Working drone's Tasks\n");
+                textArea2.append("MD[3]: Generating 20 subtasks (47 minutes needed)\nMD[4]: Generating 18 subtasks (47 minutes needed)\nMD[2]: Generating 20 subtasks (39 minutes needed)\n");
+                textArea4.setText(""); textArea4.setText("Executing Mission\nCharging");
+                stepN++;
+            break;
+            case 8:
+                textArea2.append("MD[3]:Assigning subtask 1-10 to #323WD/#334WD/#354WD/#322WD/#364WD/#374WD/#347WD/#375WD/#354WD/#312WD\n");
+                textArea2.append("MD[4]:Assigning subtask 1-10 to #423WD/#434WD/#454WD/#422WD/#464WD/#474WD/#447WD/#475WD/#454WD/#412WD\n");
+                textArea2.append("MD[2]:Assigning subtask 1-10 to #223WD/#234WD/#254WD/#222WD/#264WD/#274WD/#247WD/#275WD/#254WD/#212WD\n");
                 textArea3.append("Assigning Tasks to working Drones...\n");
-                textArea6.append("Collecting Data...\n");
+                
+                stepN++;
+            break;
+            case 9: 
+                textArea6.append("WD[312->322]:Collecting Data... (4.80GB / 23 minutes needed)\n");
+                textArea6.append("WD[412->422]:Collecting Data... (4.23GB / 22 minutes needed)\n");
+                textArea6.append("WD[212->222]:Collecting Data... (4.63GB / 23 minutes needed)\n");
+                threadDC.start();
                 viewPartialBtn.setVisible(true);
                 stepN++;
             break;
-            case 8: 
-                textArea6.append("WD: Drone #465WD Crashed...\n");
+            case 10: 
+                textArea7.append("WD[4]: Drone #465WD is not responding (13 seconds)\n");
                 stepN++;
             break;
-            case 9:
+            case 11: 
+                textArea7.append("WD[4]: Drone #465WD is not responding (23 seconds)\n");
+                stepN++;
+            break;
+            case 12: 
+                textArea3.append("WD[4]: Drone #465WD Crashed...\n");
+                stepN++;
+            break;
+            case 13:
                 textArea4.setText(""); textArea4.setText("Notify Drone Crash\nExecuting Mission\nCharging\n"); 
-                textArea1.append("Initiating Drone Retrieval Program\n");
+                textArea1.append("Initiating Drone Retrieval Program (9 minutes needed)\n");
                 textArea1.append("Checking Availability of Transporter Drone\n");
                 stepN++;
             break;
-            case 10:
+            case 14:
                  textArea8.append("Sending Acknowledgement...\n");
                 stepN++;
             break;
-            case 11:
+            case 15:
+                textArea1.append("TD acknowledgement receieved\n");
                 textArea1.append("Deploying Transporter Drones\n");
                 stepN++;
             break;
-            case 12:
-                textArea1.append("Assigning Replacement Drone to Drone[3]\n");
+            case 16:
+                textArea1.append("Assigning Replacement MD[4] (234 in stock)\n");
                 stepN++;
                break;
-            case 13:
+            case 17:
                 textArea3.append("Deploying new Drone\n");
-                textArea8.append("Crashed Drone Retrieved Ackoledgemen\n");
+                textArea8.append("Crashed Drone Retrieved Notification\n");
                 textArea4.setText(""); textArea4.append("Deploy New Drone\nExecuting Mission\nCharging");
                 stepN++;
                break;
-            case  14:
-                textArea1.append("Crashed Drone Retrieved\n");
-                textArea3.append("Assign Task to new WD\n");
+            case 18:
+                textArea1.append("Crashed Drone Retrieved (11 minutes needed)\n");
+                textArea3.append("MD[4]: Assign Task to new #483WD\n");
                 textArea4.setText(""); textArea4.append("Executing Mission\nCharging\n");
                 stepN++;
                break;
-            case 15:  
-                    threadDC.stop();
+            case 19: 
+                textArea6.append("WD[312->322]:Completed \n");
+                textArea6.append("WD[412->422]:Completed \n");
+                textArea6.append("WD[212->222]:Completed \n");
+                threadDC.stop();
+                stepN++;
+            break;
+             case 20:
+                textArea2.append("MD[3]:Assigning subtask 11-20 to #323WD/#334WD/#354WD/#322WD/#364WD/#374WD/#347WD/#375WD/#354WD/#312WD\n");
+                textArea2.append("MD[4]:Assigning subtask 11-18 to #423WD/#434WD/#454WD/#422WD/#464WD/#474WD/#447WD/#475WD/#454WD/#412WD\n");
+                textArea2.append("MD[2]:Assigning subtask 11-20 to #223WD/#234WD/#254WD/#222WD/#264WD/#274WD/#247WD/#275WD/#254WD/#212WD\n");
+                
+                stepN++;
+            break;
+            case 21: 
+                textArea6.append("WD[312->322]:Collecting Data... (3.80GB / 23 minutes needed)\n");
+                textArea6.append("WD[412->422]:Collecting Data... (1.23GB / 16 minutes needed)\n");
+                textArea6.append("WD[212->222]:Collecting Data... (4.63GB / 23 minutes needed)\n");
+                threadDC.resume();
+                stepN++;
+            break;
+            case 22: 
+                textArea6.append("WD[312->322]:Completed \n");
+                textArea6.append("WD[412->422]:Completed \n");
+                textArea6.append("WD[212->222]:Completed \n");
+                threadDC.stop();
+                stepN++;
+            break;
+            case 23:  
                     threadHB.stop();
                     threadHBS.stop();
 
@@ -608,7 +655,7 @@ public class prototype extends javax.swing.JFrame {
                     textArea6.append("Landing...\n");
                  stepN++;
                break;
-            case 16:
+            case 24:
                 textArea1.append("Assembling Final Result...\n");
                 textArea6.append("Landed...\nCharing...\n");
                  try {
